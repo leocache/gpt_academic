@@ -185,6 +185,9 @@ XFYUN_APPID = "00000000"
 XFYUN_API_SECRET = "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
 XFYUN_API_KEY = "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
 
+# 接入谷歌Gemini
+GOOGLE_GEMINI_KEY = ""
+GOOGLE_GEMINI_MODEL = ""
 
 # 接入智谱大模型
 ZHIPUAI_API_KEY = ""
