@@ -543,6 +543,22 @@ if "zhipuai" in AVAIL_LLM_MODELS:   # zhipuai
         })
     except:
         print(trimmed_format_exc())
+if "gemini" in AVAIL_LLM_MODELS:   # gemini
+    try:
+        from .bridge_gemini import predict_no_ui_long_connection as gemini_noui
+        from .bridge_gemini import predict as gemini_ui
+        model_info.update({
+            "gemini": {
+                "fn_with_ui": gemini_ui,
+                "fn_without_ui": gemini_noui,
+                "endpoint": None,
+                "max_token": 4096,
+                "tokenizer": tokenizer_gpt35,
+                "token_cnt": get_token_num_gpt35,
+            }
+        })
+    except:
+        print(trimmed_format_exc())
 if "deepseekcoder" in AVAIL_LLM_MODELS:   # deepseekcoder
     try:
         from .bridge_deepseekcoder import predict_no_ui_long_connection as deepseekcoder_noui
