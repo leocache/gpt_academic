@@ -25,12 +25,12 @@ class GeminiInstance():
         )
         model = genai.GenerativeModel(GOOGLE_GEMINI_MODEL)
         self.result_buf = ""
-        print("1")
+        # print("1")
         response = model.generate_content(
             contents=generate_message_payload(inputs, llm_kwargs, history, system_prompt),
             # "你好"
         )
-        print("2")
+        # print("2")
         # for event in response.events():
         #     if event.event == "add":
         #         self.result_buf += event.data
